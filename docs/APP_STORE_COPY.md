@@ -36,7 +36,7 @@ ivf, fertility, medication, treatment, reminder, protocol, cycle, appointment, i
 - No cloud sync in MVP.
 
 ## Support URL
-https://<github-username>.github.io/<repo-name>/site/support.html
+https://zhzhq888-art.github.io/IVFToday/site/support.html
 
 ## Marketing URL
-https://<github-username>.github.io/<repo-name>/site/
+https://zhzhq888-art.github.io/IVFToday/site/
