@@ -1,0 +1,51 @@
+name: IVFToday
+options:
+  bundleIdPrefix: com.littlegoals.ivftoday
+  deploymentTarget:
+    iOS: 17.0
+  developmentLanguage: en
+  organizationName: LittleGoals
+targets:
+  IVFToday:
+    type: application
+    platform: iOS
+    scheme:
+      testTargets:
+        - IVFTodayTests
+        - IVFTodayUITests
+    sources:
+      - path: IVFToday
+    resources:
+      - path: IVFToday/Resources
+    dependencies:
+      - sdk: SwiftUI.framework
+      - sdk: SwiftData.framework
+      - sdk: UIKit.framework
+    info:
+      path: IVFToday/Info.plist
+      properties:
+        CFBundleDisplayName: IVFToday
+        UILaunchStoryboardName: LaunchScreen
+    entitlements:
+      path: IVFToday/IVFToday.entitlements
+  IVFTodayTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: IVFTodayTests
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+    dependencies:
+      - target: IVFToday
+
+  IVFTodayUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: IVFTodayUITests
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+    dependencies:
+      - target: IVFToday
