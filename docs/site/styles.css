@@ -37,6 +37,13 @@ a {
   padding: 40px;
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
 .card {
   margin: 0 0 20px;
   padding: 28px;
@@ -63,7 +70,8 @@ a {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   margin: 0 0 12px;
   line-height: 1.08;
 }
@@ -74,6 +82,10 @@ h1 {
 
 h2 {
   font-size: 1.45rem;
+}
+
+h3 {
+  font-size: 1.05rem;
 }
 
 p,
@@ -95,6 +107,30 @@ li {
   margin-top: 24px;
 }
 
+.hero-points {
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-points li {
+  position: relative;
+  margin: 0 0 10px;
+  padding-left: 28px;
+}
+
+.hero-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--secondary);
+  box-shadow: 0 0 0 6px rgba(248, 195, 92, 0.18);
+}
+
 .button {
   display: inline-block;
   padding: 12px 18px;
@@ -113,9 +149,71 @@ li {
   background: var(--secondary);
 }
 
+.signal-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(15, 118, 110, 0.08), rgba(255, 255, 255, 0.45));
+}
+
+.signal-kicker {
+  margin: 0 0 4px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.signal-card {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.signal-card-strong {
+  border-color: rgba(15, 118, 110, 0.26);
+  background: rgba(15, 118, 110, 0.1);
+}
+
+.signal-label {
+  margin: 0 0 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.signal-copy {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.45;
+}
+
 .list {
   margin: 0;
   padding-left: 20px;
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.compare-column {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.compare-column-strong {
+  border-color: rgba(15, 118, 110, 0.26);
+  background: rgba(15, 118, 110, 0.08);
 }
 
 .note {
@@ -157,6 +255,11 @@ li {
   }
 
   .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-grid,
+  .compare-grid {
     grid-template-columns: 1fr;
   }
 

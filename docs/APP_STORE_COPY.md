@@ -4,20 +4,21 @@
 IVFToday
 
 ## Subtitle
-Daily IVF instructions, changes, and low-stock alerts
+Turn IVF instructions into today's action plan
 
 ## Promotional Text
-Turn changing IVF instructions into a clear daily action list, track what changed since yesterday, and see low-stock risk before critical doses.
+Import clinic screenshots and PDFs, catch what changed since yesterday, and reduce the risk of missing today's critical IVF tasks.
 
 ## Description
-IVFToday is a local-first iPhone app designed for the highest-stress IVF treatment days.
+IVFToday is a local-first iPhone app built for the highest-stress IVF treatment days.
 
 Instead of juggling screenshots, PDFs, and memory, IVFToday helps you:
 - import clinic instructions from screenshot or PDF
+- compare the latest instructions with previous ones
+- see today's do-not-miss medication and appointment tasks
+- catch low-stock risk before a critical dose is threatened
 - review extracted text before applying
-- see today's medication and appointment tasks
-- detect protocol changes compared with previous instructions
-- estimate medication days-left and see low-stock warnings
+- estimate medication days-left and receive low-stock warnings
 
 Built for privacy:
 - on-device OCR and PDF extraction
