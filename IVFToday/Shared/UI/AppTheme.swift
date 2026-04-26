@@ -24,19 +24,6 @@ enum AppTheme {
         var title: String {
             switch self {
             case .roseBlush:
-                return "Rose Blush"
-            case .sageRecovery:
-                return "Sage Recovery"
-            case .dawnApricot:
-                return "Dawn Apricot"
-            case .mistBlue:
-                return "Mist Blue"
-            }
-        }
-
-        var subtitle: String {
-            switch self {
-            case .roseBlush:
                 return "Gentle rose with calming sage"
             case .sageRecovery:
                 return "Low-stimulation green for recovery"
@@ -44,6 +31,19 @@ enum AppTheme {
                 return "Warm apricot for a softer mood"
             case .mistBlue:
                 return "Quiet blue for a clean, steady tone"
+            }
+        }
+
+        var subtitle: String {
+            switch self {
+            case .roseBlush:
+                return "Rose Blush"
+            case .sageRecovery:
+                return "Sage Recovery"
+            case .dawnApricot:
+                return "Dawn Apricot"
+            case .mistBlue:
+                return "Mist Blue"
             }
         }
 
@@ -101,7 +101,7 @@ enum AppTheme {
         }
     }
 
-    static let defaultPreset: Preset = .sageRecovery
+    static let defaultPreset: Preset = .dawnApricot
     static var fallbackPalette: Palette { defaultPreset.palette }
 
     static let background = fallbackPalette.background

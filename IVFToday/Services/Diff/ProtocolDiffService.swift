@@ -20,8 +20,8 @@ enum ProtocolDiffService {
     private static func diffMedications(previous: ProtocolDocument, current: ProtocolDocument) -> [ChangeItem] {
         let previousMedications = previous.parsedMedicationLines
         let currentMedications = current.parsedMedicationLines
-        let previousMap = Dictionary(uniqueKeysWithValues: previousMedications.map { (stableMedicationKey(for: $0), $0) })
-        let currentMap = Dictionary(uniqueKeysWithValues: currentMedications.map { (stableMedicationKey(for: $0), $0) })
+        let previousMap = keyedMedicationMap(from: previousMedications)
+        let currentMap = keyedMedicationMap(from: currentMedications)
         let allKeys = Set(previousMap.keys).union(currentMap.keys)
 
         return allKeys.compactMap { key in
@@ -92,8 +92,8 @@ enum ProtocolDiffService {
     }
 
     private static func diffAppointments(previous: ProtocolDocument, current: ProtocolDocument) -> [ChangeItem] {
-        let previousMap = Dictionary(uniqueKeysWithValues: previous.parsedAppointmentItems.map { (stableAppointmentKey(for: $0), $0) })
-        let currentMap = Dictionary(uniqueKeysWithValues: current.parsedAppointmentItems.map { (stableAppointmentKey(for: $0), $0) })
+        let previousMap = keyedAppointmentMap(from: previous.parsedAppointmentItems)
+        let currentMap = keyedAppointmentMap(from: current.parsedAppointmentItems)
         let allKeys = Set(previousMap.keys).union(currentMap.keys)
 
         return allKeys.compactMap { key in
@@ -157,10 +157,24 @@ enum ProtocolDiffService {
         medication.name.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
     }
 
+    private static func keyedMedicationMap(
+        from medications: [ProtocolDocument.ParsedMedicationLine]
+    ) -> [String: ProtocolDocument.ParsedMedicationLine] {
+        medications.reduce(into: [:]) { partialResult, medication in
+            partialResult[stableMedicationKey(for: medication)] = medication
+        }
+    }
+
     private static func stableAppointmentKey(for appointment: AppointmentItem) -> String {
         let normalizedTitle = appointment.title.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
         let normalizedKind = appointment.kind.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
         return "\(normalizedKind)|\(normalizedTitle)"
+    }
+
+    private static func keyedAppointmentMap(from appointments: [AppointmentItem]) -> [String: AppointmentItem] {
+        appointments.reduce(into: [:]) { partialResult, appointment in
+            partialResult[stableAppointmentKey(for: appointment)] = appointment
+        }
     }
 
     private static func appointmentDescription(for appointment: AppointmentItem) -> String {

@@ -54,7 +54,7 @@ struct SettingsView: View {
                     set: { themeController.selectedPreset = $0 }
                 )) {
                     ForEach(AppTheme.Preset.allCases) { preset in
-                        Text("\(preset.title) • \(preset.subtitle)")
+                        Text(preset.title)
                             .tag(preset)
                     }
                 }

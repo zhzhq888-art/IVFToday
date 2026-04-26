@@ -14,13 +14,7 @@ struct IVFTodayApp: App {
         }
 
         let schema = Schema([PersistedAppStateRecord.self])
-        let configuration = ModelConfiguration(schema: schema)
-
-        do {
-            modelContainer = try ModelContainer(for: schema, configurations: [configuration])
-        } catch {
-            fatalError("Failed to create SwiftData container: \(error.localizedDescription)")
-        }
+        modelContainer = Self.makeModelContainer(for: schema)
 
         let store = AppStateSwiftDataStore(
             modelContext: ModelContext(modelContainer)
@@ -39,7 +33,28 @@ struct IVFTodayApp: App {
                 .environment(themeController)
                 .tint(themeController.palette.primary)
                 .background(themeController.palette.background)
+                // Current release palettes are tuned for light appearance.
+                .preferredColorScheme(.light)
         }
         .modelContainer(modelContainer)
+    }
+
+    private static func makeModelContainer(for schema: Schema) -> ModelContainer {
+        do {
+            let configuration = ModelConfiguration(schema: schema)
+            return try ModelContainer(for: schema, configurations: [configuration])
+        } catch {
+            // If the persistent store becomes unreadable on device, fall back to an
+            // in-memory container so the app still boots instead of hard-crashing.
+            let fallbackConfiguration = ModelConfiguration(
+                schema: schema,
+                isStoredInMemoryOnly: true
+            )
+            do {
+                return try ModelContainer(for: schema, configurations: [fallbackConfiguration])
+            } catch {
+                fatalError("Failed to create any SwiftData container: \(error.localizedDescription)")
+            }
+        }
     }
 }
