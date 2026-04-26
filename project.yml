@@ -1,6 +1,6 @@
 name: IVFToday
 options:
-  bundleIdPrefix: com.littlegoals.ivftoday
+  bundleIdPrefix: com.zhzhq888art
   deploymentTarget:
     iOS: 17.0
   developmentLanguage: en
@@ -9,6 +9,10 @@ targets:
   IVFToday:
     type: application
     platform: iOS
+    bundleId: com.zhzhq888art.ivftoday
+    settings:
+      base:
+        TARGETED_DEVICE_FAMILY: 1
     scheme:
       testTargets:
         - IVFTodayTests
@@ -26,11 +30,14 @@ targets:
       properties:
         CFBundleDisplayName: IVFToday
         UILaunchStoryboardName: LaunchScreen
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
     entitlements:
       path: IVFToday/IVFToday.entitlements
   IVFTodayTests:
     type: bundle.unit-test
     platform: iOS
+    bundleId: com.zhzhq888art.ivftodayTests
     sources:
       - path: IVFTodayTests
     settings:
@@ -42,6 +49,7 @@ targets:
   IVFTodayUITests:
     type: bundle.ui-testing
     platform: iOS
+    bundleId: com.zhzhq888art.ivftodayUITests
     sources:
       - path: IVFTodayUITests
     settings:

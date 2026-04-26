@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		078EEE39E69DD6FD6033F979 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D7CEC6672BF12413A0EFF /* AppTheme.swift */; };
+		0A53EBF2922F324680BD3427 /* OCRServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11B5F3FAE6EE1836240F324 /* OCRServiceTests.swift */; };
 		107B054DC78687BFA311F728 /* MedicationLineParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DFAA1A6EFB5F3A953E7B26 /* MedicationLineParserTests.swift */; };
 		16215F22BEC20A84EFD73A0C /* IVFTodayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6E81E408CDF691F2E62903 /* IVFTodayApp.swift */; };
 		16E5B38098287D5B6F786699 /* LocalNotificationScheduling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9A7A800CC5F5304AE6776C /* LocalNotificationScheduling.swift */; };
@@ -75,6 +76,7 @@
 		E7CF0BCA9D66B8DB7909B83A /* MedicationUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9A177951190A1E0D2D18C /* MedicationUnit.swift */; };
 		E85CC586BD1A009FB16F8142 /* PDFTextExtractService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405ED98E2C33E4D0625AF179 /* PDFTextExtractService.swift */; };
 		EEAC4662AE9D03A2F5F7F80A /* InventoryAlertNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E502188AE9B59B903F9B98A /* InventoryAlertNotificationService.swift */; };
+		F95E4C62A5D59A380D6CE4A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E13A61BB9B6F483609ABBC /* LaunchScreen.storyboard */; };
 		FC5A8E526D8787C614F63A4F /* ImportSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBD981BDECA08E397BED3E9 /* ImportSourceView.swift */; };
 		FE9175ABA1682A572F2B0BA3 /* AppointmentLineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6686FD4F27773F24BA97BA37 /* AppointmentLineParser.swift */; };
 /* End PBXBuildFile section */
@@ -114,7 +116,7 @@
 		2D0D18C9B8BB5687E5A3E2E4 /* ProtocolChangeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolChangeSet.swift; sourceTree = "<group>"; };
 		2E0DCB615C715743CB78542A /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		345CF660550677B654A5ADF0 /* OnboardingPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPreferences.swift; sourceTree = "<group>"; };
-		383AD63A1CD050DC4E20D490 /* IVFToday.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = IVFToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		383AD63A1CD050DC4E20D490 /* IVFToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IVFToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E3F4EAED7436E73A7619FA /* TodayTaskBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTaskBuilder.swift; sourceTree = "<group>"; };
 		3B9802D7B377A7D5064FD961 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D501AE19C3450E5A76FD8F1 /* AppointmentLineParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentLineParserTests.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		82C9FBB2F87B787328C435CC /* IVFTodayTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = IVFTodayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		835F3330D3EA8EBB497A2B45 /* CycleStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleStage.swift; sourceTree = "<group>"; };
 		86F1F09740F355EFFD7F0C65 /* ImportPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportPreviewView.swift; sourceTree = "<group>"; };
+		87E13A61BB9B6F483609ABBC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AB7A398D8BBE99B3582E560 /* AppStatePersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatePersistenceTests.swift; sourceTree = "<group>"; };
 		8BBD981BDECA08E397BED3E9 /* ImportSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportSourceView.swift; sourceTree = "<group>"; };
 		8C6E81E408CDF691F2E62903 /* IVFTodayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IVFTodayApp.swift; sourceTree = "<group>"; };
@@ -160,6 +163,7 @@
 		C2C7D27A76D6244FA8A0CDD1 /* FirstRunWalkthroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRunWalkthroughView.swift; sourceTree = "<group>"; };
 		C5C51A6A72DE3E41065C1BFE /* AppStatePersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatePersistence.swift; sourceTree = "<group>"; };
 		CD4D7CEC6672BF12413A0EFF /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		D11B5F3FAE6EE1836240F324 /* OCRServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRServiceTests.swift; sourceTree = "<group>"; };
 		D247136DFCCDE4A253759B6C /* IVFTodayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IVFTodayUITests.swift; sourceTree = "<group>"; };
 		D3D2449E22BCAFD5DF45A0D9 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		D5D9D410CC484B16B5BD8096 /* ImportedDocumentPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportedDocumentPayload.swift; sourceTree = "<group>"; };
@@ -287,6 +291,7 @@
 				145C89DFB60831FC21559569 /* InventoryAlertNotificationServiceTests.swift */,
 				4DEC26A220835DAEA78C3682 /* MedicationDraftValidationServiceTests.swift */,
 				13DFAA1A6EFB5F3A953E7B26 /* MedicationLineParserTests.swift */,
+				D11B5F3FAE6EE1836240F324 /* OCRServiceTests.swift */,
 				BBC55BD36DD6DD7FA4AF9D9F /* ProtocolDiffAndInventoryTests.swift */,
 				5167986D99C3524191E84F0D /* TodayTaskEngineTests.swift */,
 			);
@@ -420,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				3B9802D7B377A7D5064FD961 /* Assets.xcassets */,
+				87E13A61BB9B6F483609ABBC /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -616,6 +622,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76105472DA62E5BF7CFAFD5D /* Assets.xcassets in Resources */,
+				F95E4C62A5D59A380D6CE4A1 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,6 +703,7 @@
 				4EE5CDA072ADEB11515D9532 /* InventoryAlertNotificationServiceTests.swift in Sources */,
 				4A648686846E923AA5D06721 /* MedicationDraftValidationServiceTests.swift in Sources */,
 				107B054DC78687BFA311F728 /* MedicationLineParserTests.swift in Sources */,
+				0A53EBF2922F324680BD3427 /* OCRServiceTests.swift in Sources */,
 				7B4308C7977195774B97885C /* ProtocolDiffAndInventoryTests.swift in Sources */,
 				62BEF9E65066701C6CB01F66 /* TodayTaskEngineTests.swift in Sources */,
 			);
@@ -735,7 +743,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.littlegoals.ivftoday.IVFTodayUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhzhq888art.IVFTodayUITests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = IVFToday;
@@ -748,14 +756,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = IVFToday/IVFToday.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = YDJY77YT83;
 				INFOPLIST_FILE = IVFToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.littlegoals.ivftoday.IVFToday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhzhq888art.ivftoday;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -765,14 +774,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = IVFToday/IVFToday.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = YDJY77YT83;
 				INFOPLIST_FILE = IVFToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.littlegoals.ivftoday.IVFToday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhzhq888art.ivftoday;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -842,7 +852,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.littlegoals.ivftoday.IVFTodayTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhzhq888art.IVFTodayTests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IVFToday.app/IVFToday";
@@ -859,7 +869,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.littlegoals.ivftoday.IVFTodayTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhzhq888art.IVFTodayTests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IVFToday.app/IVFToday";
@@ -876,7 +886,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.littlegoals.ivftoday.IVFTodayUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhzhq888art.IVFTodayUITests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = IVFToday;
